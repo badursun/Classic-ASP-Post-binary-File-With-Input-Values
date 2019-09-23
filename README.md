@@ -22,35 +22,37 @@ And add some file and inputs
 
 ```asp
   <%
-      ' Add Some File
-      FPost.AddFile("1.png")
-      FPost.AddFile("") ' Return ERROR
-      FPost.AddFile("2.jpg") ' Return ERROR because file not exist
-      FPost.AddFile("sample.png")
-      FPost.AddFile("test.txt")
-      FPost.AddFile("3.png")
-      FPost.AddFile("3png.zip")
+    ' Add Some File
+    FPost.AddFile("test_files/1.png")
+    FPost.AddFile("test_files/test.txt")
+    FPost.AddFile("test_files/3.png")
+    FPost.AddFile("test_files/3png.zip")
 
-      ' Add Some Data (inputName, inputValue)
-      FPost.AddText "name", "Anthony Burak"
-      FPost.AddText "email", "badursun@gmail.com"
-      FPost.AddText "surname", "DURSUN"
+    ' Add Some Not Exist File
+    FPost.AddFile("")
+    FPost.AddFile("test_files/2.jpg")
+    FPost.AddFile("test_files/sample.png")
 
-      ' Post File URL And Post Type
-      FPost.PostURL("http://remote_url/maybe.php")
-      FPost.FormType("POST") ' POST, PUT, DELETE
+    ' Add Some Data (inputName, inputValue)
+    FPost.AddText "adi", "Anthony Burak"
+    FPost.AddText "eposta", "badursun@gmail.com"
+    FPost.AddText "soyadi", "DURSUN"
+    
+    ' Post File URL And Post Type
+    FPost.PostURL("http://demoadresi.com/GET_FILE/")
+    FPost.FormType("POST")
 
-      ' Get Post HTTPStatus Answer (Default:200=Success)
-      If FPost.PostFiles() = True Then 
-        Response.Write "SUCCESS"&vbcrlf
-        Response.Write "STATUS CODE: "&FPost.HTTPStatus()
-        Response.Write "HTTP ANSWER: "&FPost.HTTPAnswer()
-      Else
-        Response.Write "FAILED"&vbcrlf
-        Response.Write "STATUS CODE: "&FPost.HTTPStatus()
-        Response.Write "HTTP ANSWER: "&FPost.HTTPAnswer()
-      End If
-  Set FPost = Nothing
+    ' Get Post HTTPStatus Answer (Default:200=Success)
+    If FPost.PostFiles() = True Then 
+      Response.Write "SUCCESS"&vbcrlf
+      Response.Write "STATUS CODE: "&FPost.HTTPStatus()
+      Response.Write "HTTP ANSWER: "&FPost.HTTPAnswer()
+    Else
+      Response.Write "SUCCESS"&vbcrlf
+      Response.Write "STATUS CODE: "&FPost.HTTPStatus()
+      Response.Write "HTTP ANSWER: "&FPost.HTTPAnswer()
+    End If
+    Set FPost = Nothing
   %>
 ```
 
