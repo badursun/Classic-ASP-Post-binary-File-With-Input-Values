@@ -1,4 +1,6 @@
 # Introduction
+Read binary file and POST Remote SErver with input and values on Classic ASP
+
 FPost Class is helper for read binary data and post to remote server with WebKitFormBoundary standarts. Just define the class and specify the physical files you want to add. Automatically checks for the presence of files. Makes the related MimeType definitions.
 
 # Usage
@@ -58,7 +60,7 @@ And add some file and inputs
 
 # Some Information 
 
-## Classic-ASP-Post-binary-File-With-Input-Values
+## Read binary file and POST Remote SErver with input and values on Classic ASP
 How to read file binary and post to remote server and bonus with inputs and values.
 
 ## Is it possible?
@@ -76,9 +78,4 @@ Each item in a multipart message is separated by a boundary marker. Webkit based
 
 ## What does the random string after a WebKitFormBoundary do\mean?
 That's just the typical way of how a so called "boundary" between different parts of a mime structure is defined. The receiving side can tell the different parts apart by this. Same logic is used in different things, email messages too for example. Actually it is not the "random part" of that boundary that counts. The whole string is matched. It is simply a convention that each software uses a unique prefix string for such boundaries for transparency reasons. But in general the only requirement is that the chosen string must be unique throughout all contained data. Unique obviously except for the corresponding boundaries which must use exactly the same string.
-
-
-
-
-
 
