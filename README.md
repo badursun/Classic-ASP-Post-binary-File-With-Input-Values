@@ -58,6 +58,45 @@ And add some file and inputs
   %>
 ```
 
+## Sample webKitformBoundary Structure
+
+```txt
+------WebKitFormBoundarydKopUurI3iMLR4X6Gy2sZ
+Content-Disposition: form-data; name="name"
+
+Anthony Burak
+------WebKitFormBoundarydKopUurI3iMLR4X6Gy2sZ
+Content-Disposition: form-data; name="email"
+
+badursun@gmail.com
+------WebKitFormBoundarydKopUurI3iMLR4X6Gy2sZ
+Content-Disposition: form-data; name="surname"
+
+DURSUN
+------WebKitFormBoundarydKopUurI3iMLR4X6Gy2sZ
+Content-Disposition: form-data; name="file0"; filename="1.png"
+Content-Type: image/png
+
+------WebKitFormBoundarydKopUurI3iMLR4X6Gy2sZ
+Content-Disposition: form-data; name="file1"; filename="sample.png"
+Content-Type: image/png
+
+------WebKitFormBoundarydKopUurI3iMLR4X6Gy2sZ
+Content-Disposition: form-data; name="file2"; filename="test.txt"
+Content-Type: text/plain
+
+------WebKitFormBoundarydKopUurI3iMLR4X6Gy2sZ
+Content-Disposition: form-data; name="file3"; filename="3.png"
+Content-Type: image/png
+
+------WebKitFormBoundarydKopUurI3iMLR4X6Gy2sZ
+Content-Disposition: form-data; name="file4"; filename="3png.zip"
+Content-Transfer-Encoding: base64
+Content-Type: application/x-zip-compressed
+
+------WebKitFormBoundarydKopUurI3iMLR4X6Gy2sZ--
+```
+
 # Some Information 
 
 ## Read binary file and POST Remote SErver with input and values on Classic ASP
@@ -71,7 +110,7 @@ Yes! Only use some MSMXL object, FileSystemObject, ADODB.Stream and Magic.
 2-) ReadBinaryFile OR ReadTextFile AND SaveBinaryData OR SaveTextData on memory.
 3-) Convert binary data to Text for submiting.
 4-) Build WebKitFormBoundaryd (this is very important)
-4-) Post data to Remote URL with Binary data in WebKitFormBoundaryd
+4-) Post data to Remote URL with Binary data in WebKitFormBoundary
 
 ## What the WebKitFormBoundary
 Each item in a multipart message is separated by a boundary marker. Webkit based browsers put "WebKitFormBoundary" in the name of that boundary. 
